@@ -1,5 +1,5 @@
 from django.urls import path, include
-from mysite.mysite.admin import admin_site
+from mysite.admin import admin_site
 
 
 urlpatterns = [
