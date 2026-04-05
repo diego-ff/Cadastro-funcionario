@@ -1,0 +1,34 @@
+<h1>Página de Funcionários</h1>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>RG</th>
+      <th>CPF</th>
+      <th>Data Nascimento</th>
+      <th>Endereço</th>
+      <th>Cidade</th>
+      <th>Email</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for f in funcionarios %}
+      <tr>
+        <td>{{ f.nome }}</td>
+        <td>{{ f.rg }}</td>
+        <td>{{ f.cpf }}</td>
+        <td>{{ f.data_nascimento }}</td>
+        <td>{{ f.endereco }}</td>
+        <td>{{ f.cidade }}</td>
+        <td>{{ f.email }}</td>
+        <td>{{ f.telefone }}</td>
+      </tr>
+    {% empty %}
+      <tr>
+        <td colspan="8">Nenhum funcionário cadastrado.</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

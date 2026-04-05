@@ -26,15 +26,16 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
-    "contacts.apps.ContactsConfig",
-    "polls.apps.PollsConfig",
-    "accounts.apps.AccountsConfig",
-    "django.contrib.admin.apps.SimpleAdminConfig",
+    "funcionarios.apps.FuncionariosConfig",
+    "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "crispy_forms",
+    "crispy_bootstrap5",
+    "widget_tweaks",
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,5 @@ if not DEBUG:
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
