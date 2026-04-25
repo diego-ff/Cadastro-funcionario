@@ -54,7 +54,7 @@ class Funcionario(models.Model):
     )
 
     email = models.EmailField("E-mail")
-    telefone = models.CharField("Telefone", max_length=12)
+    telefone = models.CharField("Telefone", max_length=14)
 
     def __str__(self):
         return self.nome
